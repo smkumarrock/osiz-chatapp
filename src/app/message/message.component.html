@@ -1,0 +1,25 @@
+<div class="mt-5">
+  <div class="container col-lg-5 col-md-5 col-sm-12 shadow p-0 mb-5 mt-5 bg-white rounded user-font main_container">
+    <div class="chat_name text-center p-3">
+      <h3>{{(TargetUserDetails?.name)? TargetUserDetails?.name : 'Group Chat'}}</h3>
+    </div>
+<div class="msg-area" style="overflow: scroll; height: xyz;" #scrollMe [scrollTop]="scrollMe.scrollHeight">
+  <div *ngFor="let msg of messageList">
+      <div class="container mt-3 message" *ngIf="CurrentUserDetails.name == msg.name" style="text-align: right;">
+          <h4 style="margin: 0;">you</h4>
+          <p style="margin: 0;">{{msg.message}}</p>
+      </div>
+      <div class="container mt-3 message" *ngIf="CurrentUserDetails.name != msg.name">
+          <h4 style="margin: 0;">{{msg.name}}</h4>
+          <p style="margin: 0;">{{msg.message}}</p>
+      </div>
+  </div>
+</div>
+<div class="message-text">
+  <div class="row col-12 ml-auto mr-auto" >
+      <input [(ngModel)]="newMessage" type="text" style="width:75%;"/>
+      <button (click)="sendMessage()" [disabled] ='!newMessage' style="width:25%;">Send</button>
+  </div>
+</div>
+</div>
+</div>

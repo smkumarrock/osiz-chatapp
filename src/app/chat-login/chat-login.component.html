@@ -1,0 +1,11 @@
+<div class="mt-5">
+<div class="container col-md-6 shadow p-3 mb-5 mt-5 bg-white rounded user-font">
+  <form>
+    <div class="container">
+      <label for="uname"><b>Username</b></label>
+      <input type="text" placeholder="Enter Username" [(ngModel)]="uname_1" #uname name="uname" required>
+      <button type="submit" [disabled] ='!uname_1' (click)="chatLogin(uname.value)">Open Chat</button>
+    </div>
+  </form>
+</div>
+</div>

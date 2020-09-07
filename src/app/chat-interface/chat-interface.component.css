@@ -1,0 +1,18 @@
+.user-font {
+    font-family: serif;
+    font-style: italic;
+}
+  .container {
+    border: 2px solid #dedede;
+    height: 80vh;
+  }
+  .chat_header {
+    height: 65vh;
+    overflow-y: auto;
+  }
+  .user_name {
+      background-color: #ebf0f5;
+  }
+  ::-webkit-scrollbar {
+    width: 1px;
+}

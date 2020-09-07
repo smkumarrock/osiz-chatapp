@@ -1,0 +1,14 @@
+<div class="mt-5">
+  <div class="container col-lg-5 col-md-5 col-sm-12 shadow p-3 mb-5 mt-5 bg-white rounded user-font text-center">
+    <div class="chat_name text-center p-3">
+      <h2>Chat users</h2>
+    </div>
+    <div class="chat_header">
+      <div *ngFor="let user of User_Arr">
+        <div class="user_name mt-3 p-3" (click)="joinRoom(user)">
+          <p>{{user.name}}</p>
+        </div>
+      </div> 
+    </div> 
+  </div> 
+</div> 
